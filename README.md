@@ -1,6 +1,7 @@
 # STM
 ###Research Advisor - 유용석<br>
-###Project Member - 진현두, 안연상, 이현두, 이상민, 조완기, 서주연<br><br>
+###Teaching Assistant - 최유진<br>
+###Project Member - 진현두, 안연상, 이현석, 이상민, 조완기, 서주연<br><br>
 #####일정
 |Week|Content|
 |:---:|--------------------------------------------|
