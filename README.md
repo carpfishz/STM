@@ -13,6 +13,9 @@
 |6주|구현 및 최종 테스트|
 |7주|최종 발표|
 
+### [Coding Convention][coding]
+[coding]: http://source.android.com/source/code-style.html
+
 ###포인트 - 이상민, 조완기
 ###지도 - 안연상, 서주연
 ###이벤트 - 이현석, 진현두
