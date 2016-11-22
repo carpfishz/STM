@@ -1,1 +1,0 @@
-HyunSuk Lee scrum
