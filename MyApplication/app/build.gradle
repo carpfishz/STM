@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "hongik.xyz.stm"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,7 +25,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile files('libs/libDaumMapAndroid.jar')
-    compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.google.android.gms:play-services:9.0.2'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support:multidex:1.0.1'
