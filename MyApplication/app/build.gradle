@@ -26,6 +26,8 @@ dependencies {
     })
     compile files('libs/libDaumMapAndroid.jar')
     compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.google.android.gms:play-services:9.8.00'
+    compile 'com.google.android.gms:play-services:9.0.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:multidex:1.0.1'
     testCompile 'junit:junit:4.12'
 }
