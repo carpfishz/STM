@@ -3,7 +3,6 @@ package hongik.xyz.stm;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,13 +25,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         img = (ImageView) findViewById(R.id.imageView1);
-        String strBarcode = "987654321";
+        final String strBarcode = "987654321";
         Bitmap barcode = createBarcode(strBarcode);
         img.setImageBitmap(barcode);
         img.invalidate();
-
-
+    
+        pointButton = (Button) findViewById(R.id.point_button);
         mapButton = (Button) findViewById(R.id.map_button);
+
+        pointButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent toBarcode = new Intent(getApplicationContext(), MapActivity.class);
+                toBarcode.putExtra("strbarcode", strBarcode);
+                setResult(RESULT_OK, toBarcode);
+                startActivity(toBarcode);
+                finish();
+            }
+        });
 
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
