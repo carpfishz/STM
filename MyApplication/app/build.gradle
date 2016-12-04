@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -25,8 +26,12 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile files('libs/libDaumMapAndroid.jar')
+    testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services:9.0.2'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.support:multidex:1.0.1'
-    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile files('libs/core-3.3.0.jar')
 }

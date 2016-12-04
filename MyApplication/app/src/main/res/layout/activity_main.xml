@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,7 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="hongik.xyz.stm.MainActivity">
+    tools:context="hongik.xyz.stm.MainActivity"
+    android:orientation="vertical">
 
     <Button
         android:text="Point"
@@ -18,15 +20,6 @@
         android:id="@+id/point_button" />
 
     <Button
-        android:text="Event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/point_button"
-        android:layout_alignLeft="@+id/point_button"
-        android:layout_alignStart="@+id/point_button"
-        android:id="@+id/event_button" />
-
-    <Button
         android:text="Map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,4 +27,20 @@
         android:layout_alignLeft="@+id/event_button"
         android:layout_alignStart="@+id/event_button"
         android:id="@+id/map_button" />
-</RelativeLayout>
+
+    <Button
+        android:text="Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/event_button"
+        android:layout_below="@+id/point_button"
+        android:layout_alignLeft="@+id/point_button"
+        android:layout_alignStart="@+id/point_button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:adjustViewBounds="true" />
+
+</LinearLayout>
