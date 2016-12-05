@@ -1,8 +1,12 @@
+###12/05
+  1. sqlite사용해서 가게정보 가져오기 구현완료
+  2. 
+  3. intent로 가게ID 받아 와서 해당 위치 줌인 구현
 
 ###11/28
   1. daum지도 API오류! 진행 불가능할듯. 일단 google 지도로 구현
   2. 지도 아이콘 만들기
-  3. 아이콘 지정하기, sqlite사용해서 가게정보 가져오기 shop(id, name, phonenum, info, 종류, lat, long)
+  3. 아이콘 지정하기, sqlite사용해서 가게정보 가져오기 shop(id, name, phonenum, info, type, lat, long)
 
 ###11/22
  1. 지도 구현관련 자료 수집(google, daum)
