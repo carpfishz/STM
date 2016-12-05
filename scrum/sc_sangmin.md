@@ -14,3 +14,11 @@
 [zxing_use]: http://fallingstar.tistory.com/151
 ##### [android 고유 기기 번호 얻는법][unique_android_id]
 [unique_android_id]: http://blog.daum.net/creazier/15310297
+
+###16.12.06
+1. 바코드 생성 완료
+2. 포인트 사용, 적립 내역 저장방법 생각해보기
+3. 안드로이드 고유 기계 번호를 사용하여 바코드 생성해보기
+
+바코드 생성 결과
+![barcode sample](../barcode_first.jpg)
