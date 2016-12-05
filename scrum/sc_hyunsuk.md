@@ -1,6 +1,6 @@
 HyunSuk Lee scrum
 
-meet date : 2016.xx.xx
+meet date : 2016.12.06
 
 1. 
 
