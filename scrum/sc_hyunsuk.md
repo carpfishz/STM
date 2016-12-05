@@ -2,11 +2,11 @@ HyunSuk Lee scrum
 
 meet date : 2016.xx.xx
 
-1. What I did since last meeting
+1. 
 
-2. Obstacles
+2. 
 
-3. What I will do before next meeting
+3. 이벤트 정보 가져와서 리스트뷰 출력하기 구현
 
 
 meet date : 2016.11.29
