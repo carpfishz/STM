@@ -22,3 +22,14 @@
 
 바코드 생성 결과<br />
 ![barcode sample](../barcode_first.jpg)
+
+###16.12.13
+1. 안드로이드 고유 기계 번호를 사용하여 바코드 생성 완료, Intent시 화면 회전 완료
+2. 포인트 사용, 적립 내역 저장방법 생각해보기 이어서
+3. 바코드 위치 조정, 다른 팀 합류
+
+안드로이드 고유번호<br />
+![unique_value](../AndroidId.jpg)
+
+회전 모습<br />
+![rotation](../barcode_rotation.jpg)

@@ -3,8 +3,10 @@ package hongik.xyz.stm;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,21 +26,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        pointButton = (Button) findViewById(R.id.point_button);
+        mapButton = (Button) findViewById(R.id.map_button);
+        final String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+        Log.d("Andorid ID value:", androidId);
+
         img = (ImageView) findViewById(R.id.imageView1);
-        final String strBarcode = "987654321";
-        Bitmap barcode = createBarcode(strBarcode);
+//        final String strBarcode = "987654321";
+        Bitmap barcode = createBarcode(androidId);
         img.setImageBitmap(barcode);
         img.invalidate();
     
-        pointButton = (Button) findViewById(R.id.point_button);
-        mapButton = (Button) findViewById(R.id.map_button);
+
 
         pointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent toBarcode = new Intent(getApplicationContext(), MapActivity.class);
-                toBarcode.putExtra("strbarcode", strBarcode);
+                Intent toBarcode = new Intent(getApplicationContext(), BarcodeActivity.class);
+                toBarcode.putExtra("strBarcode", androidId);
                 setResult(RESULT_OK, toBarcode);
                 startActivity(toBarcode);
                 finish();

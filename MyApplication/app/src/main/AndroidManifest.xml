@@ -22,7 +22,8 @@
 
         <activity
             android:name=".BarcodeActivity"
-            android:label="@string/title_activity_barcode"></activity>
+            android:label="@string/title_activity_barcode"
+            android:screenOrientation="landscape"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

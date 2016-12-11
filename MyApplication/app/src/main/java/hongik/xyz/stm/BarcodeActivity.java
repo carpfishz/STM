@@ -7,22 +7,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.common.BitMatrix;
 
-/**
- * Created by Administrator on 2016-12-04.
- */
-
 public class BarcodeActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState){
-
         super.onCreate(savedInstanceState);
-        ImageView img2 = (ImageView) findViewById(R.id.imageView2);
         setContentView(R.layout.activity_barcode);
+        ImageView img2 = (ImageView) findViewById(R.id.imageView2);
 
         Intent intent = getIntent();
         String strBarcode2 = intent.getExtras().getString("strBarcode");
