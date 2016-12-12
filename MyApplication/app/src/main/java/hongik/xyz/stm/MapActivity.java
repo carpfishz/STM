@@ -1,5 +1,6 @@
 package hongik.xyz.stm;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,22 +50,40 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         JSONArray marketData = dbconnect.getAll(DBconnect.TABLE_NAME_MAP);
 
-        int i=0;
-        while (!marketData.isNull(i)){
+        Intent intent = getIntent();
+
+        int shopID = intent.getIntExtra("place_ID", 0);
+        LatLng sejong = null;
+
+        if(shopID == 0) {
+            int i = 0;
+            while (!marketData.isNull(i)) {
+                try {
+                    JSONObject jo = marketData.getJSONObject(i);
+                    markers[i] = mMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(Double.parseDouble(jo.getString("l_lat")), Double.parseDouble(jo.getString("l_long"))))
+                            .title(jo.getString("place_ID"))
+                            .snippet(jo.getString("place_name")));
+                    Log.d("marker", jo.getString("place_name"));
+                } catch (JSONException e) {
+                    e.getStackTrace();
+                }
+                i++;
+            }
+            // Add a marker in Sydney and move the camera
+            sejong = new LatLng(36.600422, 127.299622);
+        }else{
+            JSONObject jo = dbconnect.getPlace(DBconnect.TABLE_NAME_MAP,shopID);
             try {
-                JSONObject jo = marketData.getJSONObject(i);
-                markers[i] = mMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(Double.parseDouble(jo.getString("l_lat")),Double.parseDouble(jo.getString("l_long"))))
+                Marker marker = mMap.addMarker(new MarkerOptions()
+                        .position(new LatLng(Double.parseDouble(jo.getString("l_lat")), Double.parseDouble(jo.getString("l_long"))))
                         .title(jo.getString("place_ID"))
                         .snippet(jo.getString("place_name")));
-                Log.d("marker",jo.getString("place_name"));
+                sejong = new LatLng(Double.parseDouble(jo.getString("l_lat")), Double.parseDouble(jo.getString("l_long")));
             }catch (JSONException e){
-                e.getStackTrace();
+                e.printStackTrace();
             }
-            i++;
         }
-        // Add a marker in Sydney and move the camera
-        LatLng sejong = new LatLng(36.600422, 127.299622);
         //mMap.addMarker(new MarkerOptions().position(sejong).title("Marker test"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sejong,16f));
     }
