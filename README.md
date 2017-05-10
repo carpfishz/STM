@@ -20,7 +20,9 @@
 ### 지도 - 안연상, 서주연
 ### 이벤트 - 이현석, 진현두
 <br />
+
 ### 프로젝트 import 및 실행 준비과정
+
 1. 프로젝트 열기
    * 안드로이드 스튜디오 클릭 -> import project -> git clone한 MyApplication 경로 선택, 클릭
 
