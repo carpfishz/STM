@@ -1,8 +1,8 @@
 # STM
-###Research Advisor - 유용석<br>
-###Teaching Assistant - 최유진<br>
-###Project Member - 진현두, 안연상, 이현석, 이상민, 조완기, 서주연<br><br>
-###일정
+### Research Advisor - 유용석<br>
+### Teaching Assistant - 최유진<br>
+### Project Member - 진현두, 안연상, 이현석, 이상민, 조완기, 서주연<br><br>
+### 일정
 |Week|Content|
 |:---:|--------------------------------------------|
 |1주|Concept model, Use Case, Stroyboards 작성|
@@ -16,11 +16,11 @@
 ### [Coding Convention][coding]
 [coding]: http://source.android.com/source/code-style.html
 
-###포인트 - 이상민, 조완기
-###지도 - 안연상, 서주연
-###이벤트 - 이현석, 진현두
+### 포인트 - 이상민, 조완기
+### 지도 - 안연상, 서주연
+### 이벤트 - 이현석, 진현두
 <br />
-###프로젝트 import 및 실행 준비과정
+### 프로젝트 import 및 실행 준비과정
 1. 프로젝트 열기
    * 안드로이드 스튜디오 클릭 -> import project -> git clone한 MyApplication 경로 선택, 클릭
 
